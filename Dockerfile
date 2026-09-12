@@ -16,4 +16,4 @@ ENV PYTHONUNBUFFERED=1 \
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "exec uvicorn main:app --host 0.0.0.0 --port \"${PORT:-8000}\" --workers 1 --limit-concurrency \"${UVICORN_LIMIT_CONCURRENCY:-2}\" --timeout-keep-alive 5"]
+CMD ["sh", "-c", "exec uvicorn main:app --host 0.0.0.0 --port \"${PORT:-8000}\" --workers 1 --timeout-keep-alive 5"]
